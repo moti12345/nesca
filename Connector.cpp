@@ -573,7 +573,7 @@ int Connector::connectToPort(char* ip, int port)
 	}
 	//strncat(tempIp, ip, sz > 96 ? 96 : sz);
 
-	if (port != 37777 && port != 8000 && port != 34567 && port != 9000){
+	if (port != 37777 && port != 8000 && port != 9800 && port != 9000 && port != 36666){
 		if (port == 22) size = SSHAuth::SSHLobby(ip, port, &buffer);			//SSH
 		else if (21 == port) size = nConnect(ip, port, &buffer);
 		else size = nConnect(tempIp, port, &buffer);
